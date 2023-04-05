@@ -1,4 +1,8 @@
-TODO: Fix UI for the 2nd version
+TODO:
+1. Check what if:
+1.1. No effects, many layers selected
+1.2. Some effects, many layers selected
+2. Fix UI for the 2nd version
 
 What this script does:
 1. You select a Control layer
