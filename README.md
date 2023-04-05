@@ -1,4 +1,4 @@
-TODO: Fix UI
+TODO: Fix UI for the 2nd version
 
 What this script does:
 1. You select a Control layer
