@@ -1,40 +1,12 @@
-
-var checkboxes = []
-var checkboxesLayers = []
-
-function listAllLayers(comp, level, tabSymbol){
-  // group with comp name & comp layers
-  var compGroup = win1.add("group")
-  compGroup.orientation = "column"
-  compGroup.alignment = ["left", "center"]
-  var layers = comp.layers
-  // group with comp name
-  var compNameGroup = compGroup.add("group")
-  compNameGroup.alignment = ["left", "center"]
-  for(var j = 0; j < level; j++) compNameGroup.add("statictext", undefined, tabSymbol)
-  var compName = compNameGroup.add("statictext", undefined, comp.name)
-  compName.alignment = ["left", "center"]
-  // group with comp layers
-  for(var i = 1; i <= layers.length; i++){
-    var layer = layers[i]
-    checkboxesLayers.push(layer)
-    var layerGroup = compGroup.add("group")
-    layerGroup.alignment = ["left", "center"]
-    for(var j = 0; j < level; j++) layerGroup.add("statictext", undefined, tabSymbol)
-    var checkbox = layerGroup.add("checkbox")
-    checkbox.text = layer.name
-    checkboxes.push(checkbox)
-    if(layer instanceof AVLayer && layer.source instanceof CompItem){
-      listAllLayers(layer.source, level+1, tabSymbol)
-    }
-  }
-}
+#include "listAllLayers.jsx"
 
 if(app.project.activeItem.selectedLayers.length == 1){
   // get layers
   var win1 = new Window("palette", "")
   var win2 = new Window("palette", "")
   var activeComp = app.project.activeItem
+  var checkboxes = []
+  var checkboxesLayers = []
   listAllLayers(activeComp, 0, "-")
   
   // OK button
