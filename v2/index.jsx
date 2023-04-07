@@ -10,7 +10,6 @@ if(app.project.activeItem.selectedLayers.length == 1){
   listAllLayers(activeComp, 0, "-")
   
   // OK button
-  var allLayers = []
   var okBtn = win1.add("button", undefined, "OK")
   okBtn.onClick = function(){
     var appliedEffects = activeComp.selectedLayers[0].property("ADBE Effect Parade")
@@ -28,16 +27,14 @@ if(app.project.activeItem.selectedLayers.length == 1){
       win2.add("statictext", undefined, "Контроллеры найдены. Выбери из имеющихся или нажми \"Создать новый\".")
       var win2_Group = win2.add("group", undefined, "")
       var win2_Dropdown = win2_Group.add("dropdownlist", undefined, appliedEffectsNames)
-      // if chose an existing effect
+      // chose an existing effect
       var win2_ChooseBtn = win2_Group.add("button", undefined, "Выбрать")
       win2_ChooseBtn.onClick = function(){
-        for(var i=0; i<selectedLayersArr.length; i++){
-          selectedLayersArr[i].property("Opacity").expression = "comp('"+activeComp.name+"').layer('"+activeComp.selectedLayers[0].name+"').effect('"+appliedEffectsNames[win2_Dropdown.selection.index]+"')('Checkbox')*100"
-        }
+        for(var i=0; i<selectedLayersArr.length; i++) selectedLayersArr[i].property("Opacity").expression = "comp('"+activeComp.name+"').layer('"+activeComp.selectedLayers[0].name+"').effect('"+appliedEffectsNames[win2_Dropdown.selection.index]+"')('Checkbox')*100"
         win1.close()
         win2.close()
       }
-      // if chose to create a new effect
+      // create a new effect
       var win2_NewBtn = win2_Group.add("button", undefined, "Новый")
       win2_NewBtn.onClick = function(){
         var effect = activeComp.selectedLayers[0].Effects.addProperty("ADBE Checkbox Control")
