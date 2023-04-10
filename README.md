@@ -6,6 +6,14 @@ What this script does:
 In selected Control layer's effects panel (F3) you'll see a checkbox which allows you to quickly show and hide the layers you selected.
 These layers' opacity expression is set to the checkbox value (shown the layer if checked and hidden if unchecked).
 
+Что делает этот скрипт:
+1. Вы выбираете контрольный слой
+2. Запустите скрипт
+3. Выберите слои, прозрачность которых вы хотите контролировать
+4. Нажмите ОК
+На панели эффектов выбранного управляющего слоя (F3) вы увидите чекбокс, который позволяет быстро отображать и скрывать выбранные вами слои.
+Opacity expression этих слоев устанавливается в значение чекбокса (показывает слой, если он установлен, и скрывает, если чекбокс не установлен).
+
 
 Checklist:
 
