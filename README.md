@@ -1,3 +1,5 @@
+### About
+
 What this script does:
 1. You select a Control layer
 2. Run the script
@@ -15,20 +17,20 @@ These layers' opacity expression is set to the checkbox value (shown the layer i
 Opacity expression этих слоев устанавливается в значение чекбокса (показывает слой, если он установлен, и скрывает, если чекбокс не установлен).
 
 
-Checklist:
+### Checklist:
 
-There are effects
-- existing
-    - 1 layer       [ * ]
-    - many          [ * ]
-- new
-    - 1 layer       [ * ]
-    - many
-      - all to one  [ * ]
-      - one to one  [ * ]
+- There are effects
+  - existing
+      - 1 layer       [ * ]
+      - many          [ * ]
+  - new
+      - 1 layer       [ * ]
+      - many
+        - all to one  [ * ]
+        - one to one  [ * ]
 
-No effects
-- 1 layer           [ * ]
-- many
-  - all to one      [ * ]
-  - one to one      [ * ]
+- No effects
+  - 1 layer           [ * ]
+  - many
+    - all to one      [ * ]
+    - one to one      [ * ]
