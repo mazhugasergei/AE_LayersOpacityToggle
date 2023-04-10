@@ -1,4 +1,4 @@
-### About
+# About
 
 What this script does:
 1. You select a Control layer
@@ -17,7 +17,7 @@ These layers' opacity expression is set to the checkbox value (shown the layer i
 Opacity expression этих слоев устанавливается в значение чекбокса (показывает слой, если он установлен, и скрывает, если чекбокс не установлен).
 
 
-### Checklist:
+# Checklist:
 
 - There are effects
   - existing
