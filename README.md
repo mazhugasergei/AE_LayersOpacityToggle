@@ -2,7 +2,7 @@
 
 What this script does:
 1. You select a Control layer
-2. Run the script
+2. Run the script (index.jsx)
 3. Select layers you want to control opacity of
 4. Click OK
 
@@ -13,7 +13,7 @@ These layers' opacity expression is set to the checkbox value (shown the layer i
 
 Что делает этот скрипт:
 1. Вы выбираете контрольный слой
-2. Запустите скрипт
+2. Запустите скрипт (index.jsx)
 3. Выберите слои, прозрачность которых вы хотите контролировать
 4. Нажмите ОК
 
