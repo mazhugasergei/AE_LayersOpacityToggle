@@ -23,18 +23,18 @@ Opacity expression этих слоев устанавливается в зна�
 
 # Checklist:
 
-- There are effects
-  - existing
+- There are effects:
+  - existing:
       - 1 layer       [ * ]
       - many          [ * ]
-  - new
+  - new:
       - 1 layer       [ * ]
-      - many
+      - many:
         - all to one  [ * ]
         - one to one  [ * ]
 
-- No effects
+- No effects:
   - 1 layer           [ * ]
-  - many
+  - many:
     - all to one      [ * ]
     - one to one      [ * ]
