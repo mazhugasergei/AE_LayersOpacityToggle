@@ -21,8 +21,9 @@ function createLayersTree(parentWindow, comp, level){
     var expandButton = compNameGroup.add("button", undefined, expandSymbol)
     expandButton.size = [20, 20]
     expandButton.onClick = function(){
-      this.text = layersGroup.visible ? expandSymbol : expandedSymbol
       layersGroup.visible = !layersGroup.visible
+      this.text = layersGroup.visible ? expandedSymbol : expandSymbol
+      // layersGroup.size = layersGroup.visible ? [0, 0] : [100, 100]
     }
     var compCheckbox = compNameGroup.add("checkbox")
     compCheckbox.text = comp.name
