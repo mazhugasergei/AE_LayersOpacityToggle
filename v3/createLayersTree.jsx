@@ -1,8 +1,8 @@
 function createLayersTree(parentWindow, comp, level){
   // tab symbol shows how deep the leyer is nested
   var tabSymbol = " "
-  var expandSymbol = "⮕"
-  var expandedSymbol = "⬇"
+  var expandSymbol = "▶"
+  var expandedSymbol = "▼"
   
   // default values (if these arguments were not provided)
   level = typeof level !== 'undefined' ? level : 0
@@ -21,9 +21,14 @@ function createLayersTree(parentWindow, comp, level){
     var expandButton = compNameGroup.add("button", undefined, expandSymbol)
     expandButton.size = [20, 20]
     expandButton.onClick = function(){
-      layersGroup.visible = !layersGroup.visible
-      this.text = layersGroup.visible ? expandedSymbol : expandSymbol
-      // layersGroup.size = layersGroup.visible ? [0, 0] : [100, 100]
+      try{
+        layersGroup.visible = !layersGroup.visible
+        this.text = layersGroup.visible ? expandedSymbol : expandSymbol
+        // layersGroup.size = layersGroup.visible ? undefined : [0, 0]
+      }
+      catch(e){
+        alert(e)
+      }
     }
     var compCheckbox = compNameGroup.add("checkbox")
     compCheckbox.text = comp.name
@@ -34,7 +39,10 @@ function createLayersTree(parentWindow, comp, level){
   var layersGroup = compGroup.add("group")
   layersGroup.orientation = "column"
   layersGroup.alignment = ["left", "center"]
-  if(level) layersGroup.visible = false
+  if(level){
+    // layersGroup.size = [0, 0]
+    layersGroup.visible = false
+  }
   var layers = comp.layers
   for(var i=1; i<=layers.length; i++){
     var layer = layers[i]
